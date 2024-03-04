@@ -1,6 +1,4 @@
-Here's a basic README template for your "Chatify" application:
 
----
 
 # Chatify
 
