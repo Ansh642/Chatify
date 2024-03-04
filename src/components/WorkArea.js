@@ -4,6 +4,8 @@ import { IoMdCall } from "react-icons/io";
 import { IoEllipsisVerticalSharp } from "react-icons/io5";
 import { FaTrash } from "react-icons/fa";
 import { IoSendSharp } from "react-icons/io5";
+import MessageOthers from './MessageOthers';
+import MessageSelf from './MessageSelf';
 
 
 export default function WorkArea() {
@@ -16,6 +18,15 @@ export default function WorkArea() {
       setSelectedFile(file);
       console.log(selectedFile);
     };
+
+    const [messages, setMessages] = useState([
+      { text: 'Hello, how are you?' },
+      { text: 'I am fine, thank you!' },
+      { text: 'What about you?' },
+      { text: 'I am doing great!' },
+      { text: 'Where are you !' },
+      { text: 'Still at work' },
+    ]);
 
   return (
 
@@ -56,8 +67,14 @@ export default function WorkArea() {
       </div>
 
       {/* Chatting div */}
-      <div className='h-[519px]'>
-        
+      <div className='h-[519px] flex flex-col mt-3'>
+      <div className="p-4">
+          {messages.map((message, index) => (
+            index % 2 === 0 ? 
+              <MessageSelf key={index} message={message} /> :
+              <MessageOthers key={index} message={message} />
+          ))}
+        </div>
       </div>
 
 
