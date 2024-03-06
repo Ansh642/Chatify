@@ -5,7 +5,7 @@ import { IoIosAddCircle } from "react-icons/io";
 import { MdGroupAdd } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
-<FaSearch />
+import '../App.css'
 
 export default function Sidebar() {
 
@@ -59,7 +59,7 @@ export default function Sidebar() {
       
 
       {/* Chats Div */}
-      <div className='mt-3 px-4 py-1 w-[97%] h-[510px] overflow-y-scroll cursor-pointer items-center gap-3 mx-auto outline-none rounded-xl  text-richblack-5'>
+      <div className='mt-3 px-4 py-1 w-[97%] h-[510px] overflow-y-scroll scrollbar cursor-pointer items-center gap-3 mx-auto outline-none rounded-xl  text-richblack-5'>
         <div className='flex flex-col gap-5 overflow-visible'>
           {
             conversation.map (  (ele,index)=>{

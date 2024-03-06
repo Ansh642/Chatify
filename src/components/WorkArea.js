@@ -1,12 +1,11 @@
-import {Reac,useState} from 'react'
+import {React,useState} from 'react'
 import { IoMdVideocam } from "react-icons/io";
 import { IoMdCall } from "react-icons/io";
-import { IoEllipsisVerticalSharp } from "react-icons/io5";
 import { FaTrash } from "react-icons/fa";
 import { IoSendSharp } from "react-icons/io5";
 import MessageOthers from './MessageOthers';
 import MessageSelf from './MessageSelf';
-
+import '../App.css';
 
 export default function WorkArea() {
 
@@ -26,11 +25,12 @@ export default function WorkArea() {
       { text: 'I am doing great!' },
       { text: 'Where are you !' },
       { text: 'Still at work' },
+
     ]);
 
   return (
 
-    <div className={`h-full z-10 flex flex-col w-[70vw] bg-richblack-800`}>
+    <div className={`h-full flex flex-col w-[70vw] bg-richblack-800`}>
       
       {/* Header div */}
       <div className='cursor-pointer bg-richblack-700 h-[58px] flex gap-3 flex-row justify-between px-3 py-3 border-b-[1px] border-richblack-600'>
@@ -66,9 +66,16 @@ export default function WorkArea() {
           
       </div>
 
+      
+
       {/* Chatting div */}
-      <div className='h-[519px] flex flex-col mt-3'>
-      <div className="p-4">
+      <div className='h-[519px] flex flex-col mt-3 overflow-y-scroll scrollbar'>
+
+      <div className='text-richblack-25 bg-blue-400 rounded-3xl px-3 py-2 mx-auto mt-2 mb-3'>
+        Messages and calls are end to end encrypted 🔒
+      </div>
+
+      <div className="p-4 flex flex-col gap-2">
           {messages.map((message, index) => (
             index % 2 === 0 ? 
               <MessageSelf key={index} message={message} /> :
@@ -79,8 +86,8 @@ export default function WorkArea() {
 
 
       {/* Message input div */}
-      <div className='mt-3 px-4 py-1 w-[99%] rounded-md cursor-pointer h-11 flex items-center gap-3 mx-auto bg-richblack-700 outline-none  text-white'>
-        <input type="text" name="" id="" className='bg-richblack-700 w-[97%] outline-none text-richblack-200' placeholder='Type Your Message Here...'/>
+      <div className=' px-4 py-1 w-[99%] rounded-md cursor-pointer h-11 flex items-center gap-3 mx-auto bg-richblack-700 outline-none  text-white'>
+        <input type="text" name="" id="" className='bg-richblack-700 w-[97%] outline-none text-richblack-5' placeholder='Type Your Message Here...'/>
 
 
         <div className="relative">
