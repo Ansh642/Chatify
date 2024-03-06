@@ -1,31 +1,77 @@
-# React & Tailwind CSS Starter Pack
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+
+# Chatify
+
+Chatify is a real-time chat application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack and styled with Tailwind CSS.
+
+## Features
+
+- Real-time messaging
+- User authentication
+- Chat room creation
+- Online status indication
+- Message notifications
+
+## Technologies Used
+
+- MongoDB
+- Express.js
+- React.js
+- Node.js
+- Socket.IO
+- Tailwind CSS
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   https://github.com/Ansh642/Chatify.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd chatify
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env` file in the root directory and add your MongoDB URI:
+
+   ```
+   MONGODB_URI=your_mongodb_uri
+   ```
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open your browser and visit `http://localhost:4000` to view the application.
 
 ## Usage
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
-
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
-
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
-
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
-
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+- Register or log in to create a chat room or join existing rooms.
+- Start chatting with other users in real-time.
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Commit your changes (`git commit -am 'Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature-name`).
+5. Create a new pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to expand this README with more details about your application, its features, and how to use it.
