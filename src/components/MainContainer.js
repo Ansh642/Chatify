@@ -1,9 +1,5 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-import WorkArea from './WorkArea'
-import Welcome from './Welcome'
-import CreateGroup from './CreateGroup'
-import Login from './Login'
 import { Outlet } from 'react-router-dom'
 
 export default function MainContainer() {
